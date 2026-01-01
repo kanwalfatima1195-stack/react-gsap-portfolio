@@ -1,0 +1,21 @@
+<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="220" height="220" rx="28" fill="#0f172a"/>
+
+  <!-- Stylish IH -->
+  <text x="50%" y="55%"
+        text-anchor="middle"
+        fill="#38bdf8"
+        font-size="72"
+        font-family="'Brush Script MT', 'Segoe Script', cursive"
+        font-weight="normal"
+        letter-spacing="4">
+    I H
+  </text>
+
+  <!-- Underline accent -->
+  <line x1="60" y1="135" x2="160" y2="135"
+        stroke="#e5e7eb"
+        stroke-width="3"
+        stroke-linecap="round"/>
+</svg>
