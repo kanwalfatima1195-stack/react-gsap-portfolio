@@ -1,5 +1,6 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import GradientButton from '../../components/GradientButton'
+import MessageModal from '../../components/MessageModal'
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,6 +11,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger,SplitText);
 const Hero = () => {
 
 const heroRef = useRef(null);
+const [isModalOpen, setIsModalOpen] = useState(false);
 
 // pin hero section
 useGSAP(()=> {
@@ -73,7 +75,15 @@ gsap.from(".gradient-btn", {
         <h2 className='text-6xl lg:text-[8vw] font-heading font-bold leading-[1] tracking-tight mt-3 mb-6 '>Web 
         Developer <br /> & <span className='text-stroke'> Designer </span>
         </h2>
-        <GradientButton text="Let's Talk" link="mailto:kanwalfatima1195@gmail.com" className='gradient-btn' />
+        <GradientButton 
+          text="Let's Talk" 
+          onClick={() => setIsModalOpen(true)} 
+          className='gradient-btn' 
+        />
+        <MessageModal 
+          isOpen={isModalOpen} 
+          onClose={() => setIsModalOpen(false)} 
+        />
         </div>
       </div>
     </>
