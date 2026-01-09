@@ -45,6 +45,7 @@ const [menuOpen , setMenuOpen] = useState(false);
      justify-center gap-8 transition-transform duration-500 ${menuOpen ? "translate-y-0" : "-translate-y-full"} `} onClick={()=> setMenuOpen(false)}>
       <Link to="/" className='menu-link'>Home</Link>
       <Link to="/projects" className='menu-link'>projects</Link>
+      <Link to="/messages" className='menu-link'>Messages</Link>
       <a href="mailto: nhghfdvhkk" className='menu-link'>contact</a>
 
 

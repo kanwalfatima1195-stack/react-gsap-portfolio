@@ -9,19 +9,17 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
-// MongoDB Atlas Connection
 connectDB();
 
-// Routes
+
 app.get('/', (req, res) => {
   res.json({ message: 'Portfolio Server is running!' });
 });
 
-// Save message endpoint
 app.post('/api/messages', async (req, res) => {
   try {
     const { name, email, message } = req.body;
@@ -49,7 +47,7 @@ app.post('/api/messages', async (req, res) => {
   }
 });
 
-// Get all messages endpoint (optional, for admin)
+
 app.get('/api/messages', async (req, res) => {
   try {
     const messages = await Message.find().sort({ createdAt: -1 });
